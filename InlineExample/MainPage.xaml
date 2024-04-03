@@ -2,24 +2,81 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InlineExample.MainPage">
-
+    <!--HEAD-->
     <ContentPage.Resources>
+        <!--Main Page Specific Styles-->
         <ResourceDictionary>
             <Style x:Key="labelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="DarkOrange" />
                 <Setter Property="FontSize" Value="24" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
+            <Style x:Key="buttonStyle1" TargetType="Button">
+                <Setter Property="TextColor" Value="Azure"></Setter>
+                <Setter Property="BackgroundColor" Value="Coral"></Setter>
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+             </Style>
+            <Style x:Key="buttonStyle2" TargetType="Button">
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="BackgroundColor" Value="Azure"></Setter>
+                <Setter Property="FontAttributes" Value="Italic"></Setter>
+                <Setter Property="MaximumWidthRequest" Value="250"></Setter>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+    
+    <!--BODY-->
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Hello, MAUI!" x:Name="helloLabel"
                Style="{DynamicResource labelStyle}" />
+            <Label Text="HAS NO STYLE"></Label>
+            <Label Text="HAS SOME STYLE" Style="{DynamicResource labelStyle}"></Label>
             <Button Text="Click Me" x:Name="clickButton"
                 BackgroundColor="DodgerBlue"
                 TextColor="White"
                 FontSize="18" />
+
+            <Button Text="Has Style 1" 
+                    Style="{DynamicResource buttonStyle1}" />
+            <Button Text="Has Style 2" 
+                    Style="{DynamicResource buttonStyle2}" />
+            <Grid BackgroundColor="BlueViolet" MinimumHeightRequest="400">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Label Text="Hello world of inline styling" 
+                       BackgroundColor="Beige" 
+                       TextColor="Black"/>
+                    <Label Text="Hello world of inline styling" 
+                       BackgroundColor="Beige" 
+                       TextColor="Black"/>
+                    <Label Text="Hello world of inline styling" 
+                       BackgroundColor="Beige" 
+                       TextColor="Black"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="CornflowerBlue">
+                    <Label Text="Hello world of inline stlying again"
+                       BackgroundColor="SpringGreen"
+                       />
+                    <Label Text="Hello world of inline stlying again"
+                       BackgroundColor="SpringGreen"
+                       />
+                    <Label Text="Hello world of inline stlying again"
+                       BackgroundColor="SpringGreen"
+                       />
+                    <Button Text="Stack in Grid Button" 
+                    Style="{DynamicResource buttonStyle2}" />
+                </StackLayout>
+                
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 
