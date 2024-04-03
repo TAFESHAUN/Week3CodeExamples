@@ -7,6 +7,10 @@
         <Label Text="Hello, MAUI!" Style="{StaticResource MyLabelStyle}" />
         <Label Text="Hello, MAUI!" />
         <Label Text="Hello, MAUI!" Style="{StaticResource Login}" />
+        <Button Text="Hello World!"></Button>
+        <Button Text="Hello World!"></Button>
+        <Button Text="Hello World!"></Button>
+        <Button Text="X" Style="{StaticResource CloseWindowBtn}"></Button>
     </StackLayout>
 
 </ContentPage>

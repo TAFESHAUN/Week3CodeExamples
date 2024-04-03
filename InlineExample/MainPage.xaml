@@ -29,6 +29,7 @@
     <!--BODY-->
     <ContentPage.Content>
         <StackLayout>
+            <Button Text="X" Style="{StaticResource CloseWindowBtn}"></Button>
             <Label Text="Hello, MAUI!" x:Name="helloLabel"
                Style="{DynamicResource labelStyle}" />
             <Label Text="HAS NO STYLE"></Label>
@@ -75,7 +76,7 @@
                     <Button Text="Stack in Grid Button" 
                     Style="{DynamicResource buttonStyle2}" />
                 </StackLayout>
-                
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>

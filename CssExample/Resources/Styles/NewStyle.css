@@ -8,6 +8,15 @@
     color: #ffffff;
 }
 
+.otherButton {
+    background-color: crimson;
+    color: azure;
+    max-width: contain;
+}
+
+
+
+/*SET OBJECT and comeback to this */
 /*@media (platform: ios) {
     Label {
         font-size: small;

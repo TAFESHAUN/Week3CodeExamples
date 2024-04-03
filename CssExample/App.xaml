@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:CssExample"
              x:Class="CssExample.App">
     <Application.Resources>
-
+        <!--Global Stylesheet Later -->
     </Application.Resources>
 </Application>

@@ -7,10 +7,15 @@
     <ContentPage.Resources>
         <StyleSheet Source="Resources/Styles/NewStyle.css" />
     </ContentPage.Resources>
+    <Grid>
+        <StackLayout>
+            <Label Text="Hello" StyleClass="myCustomLabel"/>
+            <Button Text="Click Me" StyleClass="myCustomButton"/>
+        </StackLayout>
 
-    <StackLayout>
-        <Label Text="Hello" StyleClass="myCustomLabel"/>
-        <Button Text="Click Me" StyleClass="myCustomButton"/>
-    </StackLayout>
+        <Grid MaximumWidthRequest="200" MaximumHeightRequest="200">
+            <Button Text="Hello Other Button" StyleClass="otherButton"/>
+        </Grid>
+    </Grid>
 
 </ContentPage>
